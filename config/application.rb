@@ -28,5 +28,7 @@ module CommonReadsApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.credentials.secret_key_base = ENV['RAILS_MASTER_KEY']
   end
 end
