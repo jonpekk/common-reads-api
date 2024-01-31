@@ -13,10 +13,11 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-
+  
   namespace :api do
     namespace :v1 do
       resources :books, only: [:index]
+      get 'current_user', to: 'current_user#index'
       # Add other routes as needed
     end
   end
